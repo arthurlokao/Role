@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-ad-project/sample.zip",
       "projectGuid": "bbaf1b47-3dc9-4606-a23a-bdf3ac5bab46",
-      "lastModifiedDate": 1470154820418,
+      "lastModifiedDate": 1471257786606,
       "creationDate": 1456680309937
     },
     "XDK-app-designer": "true",
@@ -76,7 +76,7 @@
         "gitref": "",
         "name": "Splashscreen",
         "description": "Cordova Splashscreen Plugin",
-        "checksum": "170efb68"
+        "checksum": "a7fdb6d9"
       },
       {
         "id": "cordova-plugin-geolocation",
@@ -132,7 +132,7 @@
         },
         "sourceLocation": "plugins/phonegap-facebook-plugin",
         "selectedState": "Included",
-        "checksum": "d9be9741",
+        "checksum": "58a55b51",
         "dependsOn": [],
         "topLevel": true,
         "cordovaVersion": ">=3.5.0",
