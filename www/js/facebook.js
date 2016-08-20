@@ -16,7 +16,6 @@ facebookConnectPlugin.getLoginStatus(
                       document.getElementById("ftperfil").src = response.picture.data.url;
                       document.getElementById("nomeperfil").innerText = response.name;
                       document.getElementById("cidade").innerHTML = "<button type='button' class='btn btn-link'><span class='glyphicon glyphicon-home'></span>  Mora em "+response.location.name+"</button>";
-                      navigator.notification.alert("ID Lokao:"+id);
                       testarinteresse();
                       //activate_subpage("#primeiratela");
                      }
@@ -35,7 +34,6 @@ facebookConnectPlugin.getLoginStatus(
              document.getElementById("ftperfil").src = response.picture.data.url;
              document.getElementById("nomeperfil").innerText = response.name;
              document.getElementById("cidade").innerHTML = "<button type='button' class='btn btn-link'><span class='glyphicon glyphicon-home'></span>  Mora em " + response.location.name+"</button>";
-             navigator.notification.alert("ID Lokao:"+id);
              testarinteresse();
              //activate_subpage("#primeiratela");
             }

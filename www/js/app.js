@@ -4,7 +4,8 @@ var textsugestao;
                   
                    function lista(){
                        var $server;
-                       $server = 'http://200.18.128.78/role';
+                       //$server = 'http://200.18.128.78/role';
+                       $server = 'http://192.168.2.107/role';
                            $.ajax({
 
                                type: "get",
@@ -29,7 +30,8 @@ function abrirpag2(){
 }
     function testarinteresse(){
                        var $server;
-                       $server = 'http://200.18.128.78/role';                  
+                       //$server = 'http://200.18.128.78/role'; 
+                        $server = 'http://192.168.2.107/role';
                            $.ajax({
 
                                type: "get",
@@ -44,7 +46,6 @@ function abrirpag2(){
                                        //$('#negoco').html(data);
                                        $('#p_interesse').html(data);
                                        abrirpag2();
-                                       cadastrarperfil();
                                    }
                                 }
                            });
@@ -53,14 +54,16 @@ function abrirpag2(){
     
     function enviarsugestao(){
                        var $server;
-                       $server = 'http://200.18.128.78/role';
+                       //$server = 'http://200.18.128.78/role';
+                        $server = 'http://192.168.2.107/role';
                            $.ajax({
                                type: "get",
                                dataType  : 'html',
-                               url: $server+"/conecta2.php",
+                               url: $server+"/conecta.php",
                                data: "acao=enviarsugestao&textsugestao="+textsugestao+"&id="+id,
                                success: function(data) {
                                     navigator.notification.alert("Sua opinião foi enviada!","","Mensagem"); 
+                                    activate_subpage("#configuracoes");
                                 }
                            });
                     
@@ -68,16 +71,18 @@ function abrirpag2(){
 
     function cadastrarinteresses(){
      var $server;
-     $server = 'http://200.18.128.78/role';
+     //$server = 'http://200.18.128.78/role';
+        $server = 'http://192.168.2.107/role';
         $.ajax({
 
                type: "get",
                dataType  : 'html',
                url: $server+"/conecta.php",
-               data: "acao=cadastrarinteresses&interesses="+interesses+"&id="+id,
+               data: "acao=cadastrarinteresses&str_interesses="+str_interesses+"&id="+id,
                success: function(data) {
-                    navigator.notification.alert("Intesresses cadastrados com sucesso!","","Mensagem");
-                    abrirpag2(); 
+                    navigator.notification.alert("Interesses cadastrados com sucesso!","","Mensagem");
+                    testarinteresse();
+                    //abrirpag2(); 
                 }
            });
         
@@ -85,7 +90,8 @@ function abrirpag2(){
 
     function cadastrarperfil(){
      var $server;
-     $server = 'http://200.18.128.78/role';
+     //$server = 'http://200.18.128.78/role';
+        $server = 'http://192.168.2.107/role';
         $.ajax({
 
                type: "get",
@@ -93,13 +99,14 @@ function abrirpag2(){
                url: $server+"/conecta.php",
                data: "acao=cadastrarperfil&sexo="+sexo+"&cidade="+cidade+"&id="+id,
                success: function(data) {
-                    abrirpag2(); 
+                    
                 }
            });
         
     }
 
     var interesses = [];
+    var str_interesses = "";
     function testarmarcados(){
         if(document.getElementById("bar").checked){
             interesses[1] = 1;
@@ -150,6 +157,9 @@ function abrirpag2(){
             interesses[10] = 1;
         }else{
             interesses[10] = 0;
+        }
+        for(var i=1;i<11;i++){
+            str_interesses += interesses[i] + "";
         }
         cadastrarinteresses();
     }

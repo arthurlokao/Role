@@ -96,7 +96,7 @@
     $(document).on("click", "#sair", function(evt)
     {
          /*global activate_page */
-        logout();
+         logout();
          activate_page("#mainpage"); 
     });
     
@@ -199,6 +199,7 @@
         /* button  #bt_confirmarinteresse */
     $(document).on("click", "#bt_confirmarinteresse", function(evt)
     {
+         cadastrarperfil();
          testarmarcados();
          //cadastrarinteresses(); Dentro do testarmarcados()
          return false;
@@ -210,7 +211,7 @@
     { 
          textsugestao = document.getElementById("p_sugestao").value;
          enviarsugestao();
-         activate_subpage("#configuracoes");
+         //activate_subpage("#configuracoes"); Dentro do enviarsugestao()
          return false;
     });
     
