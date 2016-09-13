@@ -5,7 +5,7 @@ var textsugestao;
                    function lista(){
                        var $server;
                        //$server = 'http://200.18.128.78/role';
-                       $server = 'http://192.168.2.107/role';
+                       $server = 'http://192.168.43.190/role';
                            $.ajax({
 
                                type: "get",
@@ -28,10 +28,12 @@ function abrirpag(){
 function abrirpag2(){
     activate_subpage("#primeiratela");
 }
+
+var testador = 0;
     function testarinteresse(){
                        var $server;
                        //$server = 'http://200.18.128.78/role'; 
-                        $server = 'http://192.168.2.107/role';
+                        $server = 'http://192.168.43.190/role';
                            $.ajax({
 
                                type: "get",
@@ -40,13 +42,33 @@ function abrirpag2(){
                                data: "acao=consultarcadastro&id="+id,
                                success: function(data) {
                                    if(data === " "){
-                                       //$('#negoco').html(data);
                                        abrirpag();
                                    } else {
-                                       //$('#negoco').html(data);
+                                       //interesseingles();
+                                       if(testador===0){
+                                          initialize();
+                                          conta = 1;
+                                       }
                                        $('#p_interesse').html(data);
                                        abrirpag2();
                                    }
+                                }
+                           });
+                    
+            }
+
+function interesseingles(){
+                       var $server;
+                       //$server = 'http://200.18.128.78/role'; 
+                       $server = 'http://192.168.43.190/role';
+                           $.ajax({
+                               type: "get",
+                               dataType  : 'html',
+                               url: $server+"/conecta.php",
+                               data: "acao=interesseingles&id="+id,
+                               success: function(data) {
+                                   navigator.notification.alert(JSON.parse(data));
+                                   nomeingles = JSON.parse(data);
                                 }
                            });
                     
@@ -55,7 +77,7 @@ function abrirpag2(){
     function enviarsugestao(){
                        var $server;
                        //$server = 'http://200.18.128.78/role';
-                        $server = 'http://192.168.2.107/role';
+                       $server = 'http://192.168.43.190/role';
                            $.ajax({
                                type: "get",
                                dataType  : 'html',
@@ -72,7 +94,7 @@ function abrirpag2(){
     function cadastrarinteresses(){
      var $server;
      //$server = 'http://200.18.128.78/role';
-        $server = 'http://192.168.2.107/role';
+     $server = 'http://192.168.43.190/role';
         $.ajax({
 
                type: "get",
@@ -91,7 +113,7 @@ function abrirpag2(){
     function cadastrarperfil(){
      var $server;
      //$server = 'http://200.18.128.78/role';
-        $server = 'http://192.168.2.107/role';
+     $server = 'http://192.168.43.190/role';
         $.ajax({
 
                type: "get",
@@ -108,6 +130,7 @@ function abrirpag2(){
     var interesses = [];
     var str_interesses = "";
     function testarmarcados(){
+        str_interesses = "";
         if(document.getElementById("bar").checked){
             interesses[1] = 1;
         }else{
@@ -164,7 +187,163 @@ function abrirpag2(){
         cadastrarinteresses();
     }
 
+function apagarconta(){
+     var $server;
+     //$server = 'http://200.18.128.78/role';
+     $server = 'http://192.168.43.190/role';
+        $.ajax({
 
+               type: "get",
+               dataType  : 'html',
+               url: $server+"/conecta.php",
+               data: "acao=apagarconta&id="+id,
+               success: function(data) {
+                    navigator.notification.alert("Conta apagada com sucesso!","","Mensagem");
+                    logout();
+                    activate_page("#mainpage");                   
+                }
+           });
+        
+    }
 
+function deletarinteresses(){
+     var $server;
+     //$server = 'http://200.18.128.78/role';
+     $server = 'http://192.168.43.190/role';
+        $.ajax({
 
+               type: "get",
+               dataType  : 'html',
+               url: $server+"/conecta.php",
+               data: "acao=deletarinteresses&id="+id,
+               success: function(data) {
+                    testarmarcados2();
+                }
+           });
+        
+    }
+
+function testarmarcados2(){
+        str_interesses = "";
+        if(document.getElementById("bar2").checked){
+            interesses[1] = 1;
+        }else{
+            interesses[1] = 0;
+        }
+        if(document.getElementById("shopping_mall2").checked){
+            interesses[2] = 1;
+        }else{
+            interesses[2] = 0;
+        }
+        if(document.getElementById("restaurant2").checked){
+            interesses[3] = 1;
+        }else{
+            interesses[3] = 0;
+        }
+        if(document.getElementById("night_club2").checked){
+            interesses[4] = 1;
+        }else{
+            interesses[4] = 0;
+        }
+        if(document.getElementById("library2").checked){
+            interesses[5] = 1;
+        }else{
+            interesses[5] = 0;
+        }
+        if(document.getElementById("university2").checked){
+            interesses[6] = 1;
+        }else{
+            interesses[6] = 0;
+        }
+        if(document.getElementById("park2").checked){
+            interesses[7] = 1;
+        }else{
+            interesses[7] = 0;
+        }
+        if(document.getElementById("stadium2").checked){
+            interesses[8] = 1;
+        }else{
+            interesses[8] = 0;
+        }
+        if(document.getElementById("church2").checked){
+            interesses[9] = 1;
+        }else{
+            interesses[9] = 0;
+        }
+        if(document.getElementById("zoo2").checked){
+            interesses[10] = 1;
+        }else{
+            interesses[10] = 0;
+        }
+        for(var i=1;i<11;i++){
+            str_interesses += interesses[i] + "";
+        }
+        cadastrarinteresses();
+    }
+
+var titulorole, iniciorole, terminorole, inforole;
+
+function marcarole(){
+    titulorole = document.getElementById("titulorole").value;
+    iniciorole = new Date(document.getElementById("iniciorole").value);
+    terminorole = new Date(document.getElementById("terminorole").value);
+    inforole = document.getElementById("inforole").value;
+    var $server;
+     //$server = 'http://200.18.128.78/role';
+     $server = 'http://192.168.43.190/role';
+    if(iniciorole.getDate()>=Date.now() && terminorole.getDate()>iniciorole.getDate()){    
+    $.ajax({
+
+               type: "get",
+               dataType  : 'html',
+               url: $server+"/conecta.php",
+               data: "acao=marcarole&id="+id+"&titulorole="+titulorole+"&iniciorole="+iniciorole+"&terminorole="+terminorole+"&inforole="+inforole+"&idlocal="+idlocal,
+               success: function(data) {
+                    navigator.notification.alert("Rolé marcado com sucesso");
+                    activate_page("#mapa"); 
+                }
+           });
+        
+    }
+}
+
+function testarole(){
+    iniciorole = new Date(document.getElementById("iniciorole").value);
+    terminorole = new Date(document.getElementById("terminorole").value);
+    var $server;
+     //$server = 'http://200.18.128.78/role';
+     $server = 'http://192.168.43.190/role';
+        $.ajax({
+
+               type: "get",
+               dataType  : 'html',
+               url: $server+"/conecta.php",
+               data: "acao=testarole&iniciorole="+iniciorole+"&terminorole="+terminorole+"&idlocal="+idlocal,
+               success: function(data) {
+                    if(data==="0"){
+                        marcarole();
+                    }else if(data==="1"){
+                        navigator.notification.alert("Não foi possível criar um Rolé nessa data, horário e local");
+                    }
+                }
+           });
+        
+    }
+
+function selecrole(){
+    var $server;
+     //$server = 'http://200.18.128.78/role';
+     $server = 'http://192.168.43.190/role';
+        $.ajax({
+
+               type: "get",
+               dataType  : 'html',
+               url: $server+"/conecta.php",
+               data: "acao=selecrole&id="+id+"&idlocal="+idlocal,
+               success: function(data) {
+                    document.getElementById("pn_roles").innerHTML = data;
+                }
+           });
+        
+    }
 

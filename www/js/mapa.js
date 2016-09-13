@@ -1,5 +1,5 @@
-var nomelocal, infolocal;
-var nomeingles = [];
+var nomelocal, infolocal, endlocal, idlocal;
+var nomeingles;
 function initialize() {
       /*var LatLng;      
       function onError(error) {
@@ -99,7 +99,8 @@ var infowindo;
   service.nearbySearch({
     location: LatLng,
     radius: 5000,
-    types: ['restaurant'],  
+    types: ['restaurant','night_club'],
+    //types: nomeingles,  
   }, callback);
       
 function callback(results, status) {
@@ -133,6 +134,8 @@ function createMarker(place) {
     placeId: place.place_id
   }, function(place, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
+        endlocal = place.vicinity;
+        idlocal = place.place_id;
         if(place.formatted_phone_number){
           infolocal = place.vicinity + "<br>" + place.formatted_phone_number;  
           infowindo.setContent(nomelocal + infolocal + botao);

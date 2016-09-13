@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
     <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Englebert">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
@@ -15,6 +16,7 @@
     <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <script type="application/javascript" src="lib/jquery.min.js"></script>
     <script type="application/javascript" src="lib/jquery-1.12.2.js"></script>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <script type="application/javascript" src="xdk/init-dev.js"></script>
     <script type="application/javascript" src="js/init-app.js"></script>
     <script type="application/javascript" src="google_maps/google_maps.js"></script>
@@ -32,6 +34,9 @@
     <script type="application/javascript" src="js/facebook.js"></script>
     <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
     <style type="text/css">
+      html, body{
+            font-family: "Englebert", sans-serif;
+       }
       #pac-input{
             height:9%;
             width:55%;
@@ -69,7 +74,7 @@
     <div class="upage vertical-col left Fundo" id="mainpage">
       <div class="widget uib_w_1 scale-image d-margins Alinhamento Texto" data-uib="media/img" data-ver="0">
         <figure class="figure-align">
-          <img src="images/icone escrito.png">
+          <img src="images/Icone.png">
 
           <figcaption data-position="bottom"></figcaption>
         </figure>
@@ -87,15 +92,7 @@
           <p id="selecionar"></p>
         </div>
       </div>
-      <button class="btn widget uib_w_106 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" onclick="abrirpag();">Button</button>
 
-      <div class="tarea widget uib_w_105 d-margins" data-uib="media/text" data-ver="0" name="uib_w_105" id="negoco">
-        <div class="widget-container left-receptacle"></div>
-        <div class="widget-container right-receptacle"></div>
-        <div class="text-container">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
     </div>
     <div class="upage hidden fundo2" id="cadastro">
       <div class="upage-outer">
@@ -368,8 +365,8 @@
           </div>
         </div>
         <div id="role" class="upage-content vertical-col left hidden">
-          <button class="btn widget uib_w_67 botao btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1" id="bt_marcarrole"><i class="glyphicon glyphicon-plus button-icon-left" data-position="left"></i>Criar Rolé</button>
-          <div class="panel widget uib_w_101 panel-default" data-uib="twitter%20bootstrap/panel" data-ver="1">
+
+          <div class="panel widget uib_w_101 panel-default d-margins" data-uib="twitter%20bootstrap/panel" data-ver="1">
             <div class="panel-heading">
               <div class="widget-container">
                 <div class="tarea widget uib_w_102 texto2" data-uib="media/text" data-ver="0" name="uib_w_102">
@@ -383,51 +380,12 @@
             </div>
             <div class="col uib_col_12 single-col" data-uib="layout/col" data-ver="0">
               <div class="widget-container content-area vertical-col">
-                <div class="widget uib_w_68 widget-container content-area vertical-col uib-card card_dimensions left-on-header cpad-3" data-uib="layout/card" data-ver="0">
-                  <section class="card-header widget-container content-area vertical-col">
-                    <button class="btn widget uib_w_70 btn-link" data-uib="twitter%20bootstrap/button" data-ver="1">Amarelinho</button>
-                  </section>
-
-                  <section class="card-left widget-container content-area vertical-col">
-                    <div class="widget uib_w_69 imgperfil" data-uib="media/img" data-ver="0">
-                      <figure class="figure-align">
-                        <img src="images/icone_amigos_uniao.png">
-                        <figcaption data-position="bottom"></figcaption>
-                      </figure>
-                    </div>
-                  </section>
-                </div><span class="uib_shim"></span>
+                <span class="uib_shim"></span>
               </div>
             </div>
 
           </div>
 
-          <div class="sbs-container widget uib_w_59 d-margins sidebyside" data-uib="layout/side_by_side" data-ver="0">
-            <div class="leftContent widget-container">
-              <div class="table-thing widget uib_w_60 tamanhoinp" data-uib="twitter%20bootstrap/input" data-ver="1">
-                <label class="narrow-control"></label>
-                <input class="wide-control form-control default" type="text" placeholder="Pesquisar Rolés">
-              </div>
-            </div>
-            <div class="rightContent widget-container">
-              <button class="btn widget uib_w_61 btn-default" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-search" data-position="icon only"></i>
-              </button>
-            </div>
-          </div>
-          <div class="widget uib_w_64 widget-container content-area vertical-col uib-card left-on-header cpad-3 card_dimensions" data-uib="layout/card" data-ver="0">
-            <section class="card-header widget-container content-area vertical-col">
-              <button class="btn widget uib_w_66 btn-link" data-uib="twitter%20bootstrap/button" data-ver="1">Rolé na Avenida</button>
-            </section>
-
-            <section class="card-left widget-container content-area vertical-col">
-              <div class="widget uib_w_65 imgperfil" data-uib="media/img" data-ver="0">
-                <figure class="figure-align">
-                  <img src="images/icone_amigos_uniao.png">
-                  <figcaption data-position="bottom"></figcaption>
-                </figure>
-              </div>
-            </section>
-          </div>
         </div>
       </div>
     </div>
@@ -445,7 +403,8 @@
         <div class="upage-content ac0 content-area vertical-col left" id="page_65_4">
           <div class="widget uib_w_73 scale-image d-margins" data-uib="media/img" data-ver="0">
             <figure class="figure-align">
-              <img src="images/icone escrito.png">
+              <img src="images/Icone.png">
+
               <figcaption data-position="bottom"></figcaption>
             </figure>
           </div>
@@ -472,16 +431,16 @@
         </div>
         <div class="upage-content ac0 content-area vertical-col left" id="page_68_83">
           <div class="table-thing widget uib_w_81 botao" data-uib="twitter%20bootstrap/input" data-ver="1">
-            <label class="narrow-control"></label>
-            <input class="wide-control form-control default" type="text" placeholder="Título do Rolé">
+            <label class="narrow-control" for="titulorole"></label>
+            <input class="wide-control form-control default" type="text" placeholder="Título do Rolé" id="titulorole">
           </div>
           <div class="table-thing widget uib_w_82 padrao" data-uib="twitter%20bootstrap/input" data-ver="1">
-            <label class="narrow-control label-inline">Início:</label>
-            <input class="wide-control form-control default" type="datetime-local">
+            <label class="narrow-control label-inline" for="iniciorole">Início:</label>
+            <input class="wide-control form-control default" type="datetime-local" id="iniciorole">
           </div>
           <div class="table-thing widget uib_w_113 padrao" data-uib="twitter%20bootstrap/input" data-ver="1">
-            <label class="narrow-control label-inline">Término:</label>
-            <input class="wide-control form-control default" type="datetime-local" placeholder="Placeholder">
+            <label class="narrow-control label-inline" for="terminorole">Término:</label>
+            <input class="wide-control form-control default" type="datetime-local" id="terminorole">
           </div>
           <div class="tarea widget uib_w_84 padrao" data-uib="media/text" data-ver="0" name="uib_w_84">
             <div class="widget-container left-receptacle"></div>
@@ -491,18 +450,16 @@
               </p>
             </div>
           </div>
-          <div class="grid grid-pad urow uib_row_3 row-height-3" data-uib="layout/row" data-ver="0">
-            <div class="col uib_col_15 col-0_12-12" data-uib="layout/col" data-ver="0">
-              <div class="widget-container content-area vertical-col center">
-                <span class="uib_shim"></span>
-                <input id="pac-input2" class="controls" type="text" placeholder="Pesquisar local">
-                <div id="googleMap2"></div>
-              </div>
-            </div>
-            <span class="uib_shim"></span>
+          <div class="table-thing widget uib_w_159" data-uib="twitter%20bootstrap/input" data-ver="1">
+            <label class="narrow-control" for="endlocal"></label>
+            <input class="wide-control form-control default" type="text" disabled="" placeholder="Endereço do Local" id="endlocal">
+          </div>
+          <div class="table-thing widget uib_w_160 d-margins" data-uib="twitter%20bootstrap/text_area" data-ver="1">
+            <label class="narrow-control"></label>
+            <textarea rows="3" class="wide-control form-control" wrap="soft" placeholder="Informações sobre o Rolé" id="inforole"></textarea>
           </div>
 
-          <button class="btn widget uib_w_86 btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1" id="bt_marcarrole">Marcar Rolé</button>
+          <button class="btn widget uib_w_86 d-margins btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1" id="bt_marcarrole">Marcar Rolé</button>
 
         </div>
       </div>
@@ -577,12 +534,12 @@
         </div>
         <div class="upage-content ac0 content-area vertical-col left" id="page_80_85">
           <div class="list-group widget uib_w_137 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">
-            <a class="list-group-item allow-badge widget uib_w_140" data-uib="twitter%20bootstrap/list_item" data-ver="1">
+            <a class="list-group-item allow-badge widget uib_w_140" data-uib="twitter%20bootstrap/list_item" data-ver="1" id="bt_alterarint">
               <h4 class="list-group-item-heading">Alterar interesses</h4>
 
             </a>
 
-            <a class="list-group-item allow-badge widget uib_w_139" data-uib="twitter%20bootstrap/list_item" data-ver="1">
+            <a class="list-group-item allow-badge widget uib_w_139" data-uib="twitter%20bootstrap/list_item" data-ver="1" id="bt_apagarconta">
               <h4 class="list-group-item-heading">Apagar conta no Rolé</h4>
 
             </a>
@@ -612,7 +569,7 @@
               <p>Endereço/Telefone</p>
             </div>
           </div>
-          <div class="panel widget uib_w_122 panel-warning d-margins" data-uib="twitter%20bootstrap/panel" data-ver="1">
+          <div class="panel widget uib_w_122 d-margins panel-warning" data-uib="twitter%20bootstrap/panel" data-ver="1" id="pn_roles">
             <div class="panel-heading">
               <div class="widget-container">
                 <div class="tarea widget uib_w_128 texto2" data-uib="media/text" data-ver="0" name="uib_w_128">
@@ -627,50 +584,7 @@
             <div class="col uib_col_13 single-col" data-uib="layout/col" data-ver="0">
               <div class="widget-container content-area vertical-col">
                 <div class="card_grid widget uib_w_123 wrapping-col d-margins flex-basis-123" data-uib="layout/card_grid" data-ver="0">
-                  <div class="widget widget-container content-area vertical-col uib-card uib_w_124 sombra section-dimension-124 cpad-5" data-uib="layout/card" data-ver="0">
-                    <div class="tarea widget uib_w_130 texto4" data-uib="media/text" data-ver="0" name="uib_w_130">
-                      <div class="widget-container left-receptacle"></div>
-                      <div class="widget-container right-receptacle"></div>
-                      <div class="text-container">
-                        <p>29-08-2016 18:00 - 23:00</p>
-                      </div>
-                    </div>
 
-                    <section class="card-header widget-container content-area vertical-col">
-                      <div class="tarea widget uib_w_132 texto2" data-uib="media/text" data-ver="0" name="uib_w_132">
-                        <div class="widget-container left-receptacle"></div>
-                        <div class="widget-container right-receptacle"></div>
-                        <div class="text-container">
-                          <p>Rolé na Casa do Chapéu</p>
-                        </div>
-                      </div>
-                    </section>
-
-                    <section class="card-footer widget-container content-area vertical-col">
-                      <button class="btn widget uib_w_131 btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1">Participar</button>
-                    </section>
-                  </div>
-                  <div class="widget widget-container content-area vertical-col uib-card uib_w_127 section-dimension-124 sombra cpad-5" data-uib="layout/card" data-ver="0">
-                    <div class="tarea widget uib_w_134 texto4" data-uib="media/text" data-ver="0" name="uib_w_134">
-                      <div class="widget-container left-receptacle"></div>
-                      <div class="widget-container right-receptacle"></div>
-                      <div class="text-container">
-                        <p>03-11-2016 08:00 - 14:00</p>
-                      </div>
-                    </div>
-                    <section class="card-header widget-container content-area vertical-col">
-                      <div class="tarea widget uib_w_133 texto2" data-uib="media/text" data-ver="0" name="uib_w_133">
-                        <div class="widget-container left-receptacle"></div>
-                        <div class="widget-container right-receptacle"></div>
-                        <div class="text-container">
-                          <p>Rolé no Dielo</p>
-                        </div>
-                      </div>
-                    </section>
-                    <section class="card-footer widget-container content-area vertical-col">
-                      <button class="btn widget uib_w_135 btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1">Participar</button>
-                    </section>
-                  </div>
                 </div>
                 <span class="uib_shim"></span>
               </div>
@@ -757,6 +671,60 @@
           </label>
           <button class="btn widget uib_w_154 btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1" id="bt_confirmarinteresse">Confirmar</button>
         </div>
+      </div>
+    </div>
+    <div class="upage hidden fundo2" id="trocarinteresse">
+      <div class="upage-outer">
+        <div class="uib-header header-bg container-group inner-element uib_w_156" data-uib="layout/header" data-ver="0">
+          <h2>Selecionar interesses</h2>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left">
+            <button class="btn widget uib_w_158 d-margins btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1" id="bt_voltarint"><i class="glyphicon glyphicon-chevron-left" data-position="icon only"></i>
+            </button>
+          </div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_91_75">
+          <div class="tarea widget uib_w_157 d-margins padrao texto2" data-uib="media/text" data-ver="0" name="uib_w_157">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p>Selecione os tipos de locais que você possui interesse:</p>
+            </div>
+          </div>
+          <label class="checkbox checkbox-padding-left widget uib_w_144 padrao" data-uib="twitter%20bootstrap/checkbox" data-ver="1">
+            <input type="checkbox" id="bar2"><span class="checktext">Bar</span>
+          </label>
+          <label class="checkbox checkbox-padding-left widget uib_w_145 padrao" data-uib="twitter%20bootstrap/checkbox" data-ver="1">
+            <input type="checkbox" id="shopping_mall2"><span class="checktext">Shopping</span>
+          </label>
+          <label class="checkbox checkbox-padding-left widget uib_w_146 padrao" data-uib="twitter%20bootstrap/checkbox" data-ver="1">
+            <input type="checkbox" id="restaurant2"><span class="checktext">Restaurante</span>
+          </label>
+          <label class="checkbox checkbox-padding-left widget uib_w_147 padrao" data-uib="twitter%20bootstrap/checkbox" data-ver="1">
+            <input type="checkbox" id="night_club2"><span class="checktext">Boate/Danceteria</span>
+          </label>
+          <label class="checkbox checkbox-padding-left widget uib_w_148 padrao" data-uib="twitter%20bootstrap/checkbox" data-ver="1">
+            <input type="checkbox" id="library2"><span class="checktext">Biblioteca</span>
+          </label>
+          <label class="checkbox checkbox-padding-left widget uib_w_149 padrao" data-uib="twitter%20bootstrap/checkbox" data-ver="1">
+            <input type="checkbox" id="university2"><span class="checktext">Universidade</span>
+          </label>
+          <label class="checkbox checkbox-padding-left widget uib_w_150 padrao" data-uib="twitter%20bootstrap/checkbox" data-ver="1">
+            <input type="checkbox" id="park2"><span class="checktext">Parque</span>
+          </label>
+          <label class="checkbox checkbox-padding-left widget uib_w_151 padrao" data-uib="twitter%20bootstrap/checkbox" data-ver="1">
+            <input type="checkbox" id="stadium2"><span class="checktext">Estádio</span>
+          </label>
+          <label class="checkbox checkbox-padding-left widget uib_w_152 padrao" data-uib="twitter%20bootstrap/checkbox" data-ver="1">
+            <input type="checkbox" id="church2"><span class="checktext">Igreja</span>
+          </label>
+          <label class="checkbox checkbox-padding-left widget uib_w_153 padrao" data-uib="twitter%20bootstrap/checkbox" data-ver="1">
+            <input type="checkbox" id="zoo2"><span class="checktext">Zoológico</span>
+          </label>
+          <button class="btn widget uib_w_154 btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1" id="bt_confirmarinteresse2">Confirmar</button>
+        </div>
+
       </div>
     </div>
   </body>

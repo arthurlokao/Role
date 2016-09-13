@@ -26,16 +26,17 @@
     $(document).on("click", "#bt_rolelocal", function(evt)
     {
          /*global activate_subpage */
-         
+         document.getElementById("endlocal").value = endlocal;
          activate_page("#marcarrole"); 
     });
      
      $(document).on("click", "#bt_infolocal", function(evt)
     {
          /*global activate_subpage */
-         document.getElementById("p_textolocal").innerHTML = '<div style="border: 1px solid black;border-radius:15px;"><p style="font-size:18px;"><b>'+ infolocal + '</b></p></div>';
+         document.getElementById("p_textolocal").innerHTML = '<div class="w3-container w3-section w3-border w3-round-xlarge"><p style="font-size:18px;"><b>'+ infolocal + '</b></p></div>';
          /*document.getElementById("hd_local").innerHTML = '<button type="button" class="btn btn-warning" id="bt_voltarlocal"><span class="glyphicon glyphicon-chevron-left"></span></button><h2>'+nomelocal+'</h2>';*/
          
+         selecrole();
          document.getElementById("hd_local").innerHTML = '&nbsp<button class="btn widget uib_w_76 d-margins btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1" id="bt_voltarlocal"><i class="glyphicon glyphicon-chevron-left" data-position="icon only"></i></button><h2 style="width:70%;margin-left:15%">'+nomelocal+'</h2>';
 
          activate_page("#locais"); 
@@ -44,9 +45,9 @@
      /* button  #bt_entrar */
     $(document).on("click", "#bt_entrar", function(evt)
     {
-        login();
+        //login();
         //testarinteresse(); Função foi para o facebook.js
-        //activate_subpage("#primeiratela");
+        activate_subpage("#primeiratela");
     });
     
         /* button  #bt_avancar2 */
@@ -97,6 +98,7 @@
     {
          /*global activate_page */
          logout();
+         testador = 0;
          activate_page("#mainpage"); 
     });
     
@@ -132,14 +134,15 @@
     $(document).on("click", "#voltarmarcarrole", function(evt)
     {
          /*global activate_subpage */
-         activate_subpage("#role"); 
+         activate_subpage("#mapa"); 
     });    
     
         /* button  #bt_marcarrole */
     $(document).on("click", "#bt_marcarrole", function(evt)
     {
-         /*global activate_page */
-         activate_page("#marcarrole"); 
+        testarole(); 
+        //navigator.notification.alert("Seu Rolé não foi marcado porque a funcionalidade não foi feita ainda.","","Em construção");
+         //activate_page("#mapa"); 
     });
     
         /* button  #bt_voltarrecuperar */
@@ -213,6 +216,38 @@
          enviarsugestao();
          //activate_subpage("#configuracoes"); Dentro do enviarsugestao()
          return false;
+    });
+    
+        /* listitem  #bt_apagarconta */
+    $(document).on("click", "#bt_apagarconta", function(evt)
+    {
+        function onConfirm(buttonIndex){
+            if(buttonIndex==1){
+                apagarconta();
+            }
+        }
+        navigator.notification.confirm("Você realmente deseja apagar sua conta?",onConfirm,"Confirmação",['Sim','Não']);
+        //apagarconta();
+    });
+    
+        /* button  #bt_voltarint */
+    $(document).on("click", "#bt_voltarint", function(evt)
+    {
+         /*global activate_page */
+         activate_page("#configconta"); 
+         return false;
+    });
+    
+        /* listitem  #bt_alterarint */
+    $(document).on("click", "#bt_alterarint", function(evt)
+    {
+        activate_page("#trocarinteresse");
+    });
+    
+        /* button  #bt_confirmarinteresse2 */
+    $(document).on("click", "#bt_confirmarinteresse2", function(evt)
+    {
+        deletarinteresses();
     });
     
     }
