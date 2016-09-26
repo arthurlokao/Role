@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-ad-project/sample.zip",
       "projectGuid": "bbaf1b47-3dc9-4606-a23a-bdf3ac5bab46",
-      "lastModifiedDate": 1473708748340,
+      "lastModifiedDate": 1474139398815,
       "creationDate": 1456680309937
     },
     "XDK-app-designer": "true",
@@ -332,8 +332,8 @@
         "runtime_": "Crosswalk with Cordova 3.x",
         "name_": "Android",
         "preferences_": {
-          "android-minSdkVersion": "16",
-          "android-targetSdkVersion": "19",
+          "android-minSdkVersion": "19",
+          "android-targetSdkVersion": "22",
           "android-installLocation": "auto",
           "Fullscreen": true
         },
@@ -412,7 +412,7 @@
         "crosswalkVersion_": "19",
         "appVersion_": "0.0.1",
         "appAuthor_": "André Marcos, Arthur Bowen e Mariana Lellis",
-        "appDescription_": "Template to develop a Cordova mobile web app using the App Designer UI editor.",
+        "appDescription_": "Saia e divirta-se com seus amigos usando o Rolé.",
         "appVersionCode_": "1"
       }
     },

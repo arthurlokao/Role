@@ -138,10 +138,10 @@ function createMarker(place) {
         idlocal = place.place_id;
         if(place.formatted_phone_number){
           infolocal = place.vicinity + "<br>" + place.formatted_phone_number;  
-          infowindo.setContent(nomelocal + infolocal + botao);
+          infowindo.setContent(nomelocal + infolocal + botao + idlocal);
         }else{
           infolocal = place.vicinity;
-          infowindo.setContent(nomelocal + infolocal + botao);
+          infowindo.setContent(nomelocal + infolocal + botao + idlocal);
         }
     }
   });
@@ -150,6 +150,6 @@ function createMarker(place) {
     
 }    
 }
-google.maps.event.addDomListener(window, 'load', initialize);
+//google.maps.event.addDomListener(window, 'load', initialize);
 
 

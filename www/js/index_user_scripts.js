@@ -45,9 +45,9 @@
      /* button  #bt_entrar */
     $(document).on("click", "#bt_entrar", function(evt)
     {
-        //login();
+        login();
         //testarinteresse(); Função foi para o facebook.js
-        activate_subpage("#primeiratela");
+        //activate_subpage("#primeiratela");
     });
     
         /* button  #bt_avancar2 */
@@ -61,6 +61,7 @@
     $(document).on("click", "#bt_mapa", function(evt)
     {
          /*global activate_subpage */
+         navigator.notification.alert("Para o mapa funcionar, mude a orientação do seu dispositivo.","","Aviso");
          activate_subpage("#mapa"); 
         
     
@@ -249,6 +250,23 @@
     {
         deletarinteresses();
     });
+    
+        /* button  #bt_voltaravaliarlocal */
+    $(document).on("click", "#bt_voltaravaliarlocal", function(evt)
+    {
+         /*global activate_page */
+         activate_page("#locais"); 
+         return false;
+    });
+    
+        /* button  #bt_avaliarlocal */
+    $(document).on("click", "#bt_avaliarlocal", function(evt)
+    {
+         /*global activate_page */
+         activate_page("#avaliarlocal"); 
+         return false;
+    });
+    
     
     }
  document.addEventListener("app.Ready", register_event_handlers, false);

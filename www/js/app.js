@@ -5,7 +5,7 @@ var textsugestao;
                    function lista(){
                        var $server;
                        //$server = 'http://200.18.128.78/role';
-                       $server = 'http://192.168.43.190/role';
+                       $server = 'http://192.168.1.100/role';
                            $.ajax({
 
                                type: "get",
@@ -33,7 +33,7 @@ var testador = 0;
     function testarinteresse(){
                        var $server;
                        //$server = 'http://200.18.128.78/role'; 
-                        $server = 'http://192.168.43.190/role';
+                        $server = 'http://192.168.1.100/role';
                            $.ajax({
 
                                type: "get",
@@ -47,7 +47,7 @@ var testador = 0;
                                        //interesseingles();
                                        if(testador===0){
                                           initialize();
-                                          conta = 1;
+                                          testador = 1;
                                        }
                                        $('#p_interesse').html(data);
                                        abrirpag2();
@@ -60,7 +60,7 @@ var testador = 0;
 function interesseingles(){
                        var $server;
                        //$server = 'http://200.18.128.78/role'; 
-                       $server = 'http://192.168.43.190/role';
+                       $server = 'http://192.168.1.100/role';
                            $.ajax({
                                type: "get",
                                dataType  : 'html',
@@ -77,7 +77,7 @@ function interesseingles(){
     function enviarsugestao(){
                        var $server;
                        //$server = 'http://200.18.128.78/role';
-                       $server = 'http://192.168.43.190/role';
+                       $server = 'http://192.168.1.100/role';
                            $.ajax({
                                type: "get",
                                dataType  : 'html',
@@ -94,7 +94,7 @@ function interesseingles(){
     function cadastrarinteresses(){
      var $server;
      //$server = 'http://200.18.128.78/role';
-     $server = 'http://192.168.43.190/role';
+     $server = 'http://192.168.1.100/role';
         $.ajax({
 
                type: "get",
@@ -113,7 +113,7 @@ function interesseingles(){
     function cadastrarperfil(){
      var $server;
      //$server = 'http://200.18.128.78/role';
-     $server = 'http://192.168.43.190/role';
+     $server = 'http://192.168.1.100/role';
         $.ajax({
 
                type: "get",
@@ -190,7 +190,7 @@ function interesseingles(){
 function apagarconta(){
      var $server;
      //$server = 'http://200.18.128.78/role';
-     $server = 'http://192.168.43.190/role';
+     $server = 'http://192.168.1.100/role';
         $.ajax({
 
                type: "get",
@@ -209,7 +209,7 @@ function apagarconta(){
 function deletarinteresses(){
      var $server;
      //$server = 'http://200.18.128.78/role';
-     $server = 'http://192.168.43.190/role';
+     $server = 'http://192.168.1.100/role';
         $.ajax({
 
                type: "get",
@@ -283,36 +283,44 @@ function testarmarcados2(){
 
 var titulorole, iniciorole, terminorole, inforole;
 
+
 function marcarole(){
     titulorole = document.getElementById("titulorole").value;
-    iniciorole = new Date(document.getElementById("iniciorole").value);
-    terminorole = new Date(document.getElementById("terminorole").value);
+    
+    var dt1 = new Date(document.getElementById("iniciorole").value);
+    iniciorole = dt1.getFullYear()+"-"+(dt1.getMonth()+1)+"-"+dt1.getDate()+" "+(dt1.getHours()+3)+":"+dt1.getMinutes()+":"+dt1.getSeconds();
+    
+    var dt2 = new Date(document.getElementById("terminorole").value);
+    terminorole = dt2.getFullYear()+"-"+(dt2.getMonth()+1)+"-"+dt2.getDate()+" "+(dt2.getHours()+3)+":"+dt2.getMinutes()+":"+dt2.getSeconds();
+    
     inforole = document.getElementById("inforole").value;
     var $server;
      //$server = 'http://200.18.128.78/role';
-     $server = 'http://192.168.43.190/role';
-    if(iniciorole.getDate()>=Date.now() && terminorole.getDate()>iniciorole.getDate()){    
+     $server = 'http://192.168.1.100/role';
     $.ajax({
-
                type: "get",
                dataType  : 'html',
                url: $server+"/conecta.php",
                data: "acao=marcarole&id="+id+"&titulorole="+titulorole+"&iniciorole="+iniciorole+"&terminorole="+terminorole+"&inforole="+inforole+"&idlocal="+idlocal,
                success: function(data) {
-                    navigator.notification.alert("Rolé marcado com sucesso");
-                    activate_page("#mapa"); 
+                   navigator.notification.alert(data); 
+                   //navigator.notification.alert("Rolé marcado com sucesso");
+                   //activate_page("#mapa"); 
                 }
            });
         
-    }
 }
 
 function testarole(){
-    iniciorole = new Date(document.getElementById("iniciorole").value);
-    terminorole = new Date(document.getElementById("terminorole").value);
+    var dt1 = new Date(document.getElementById("iniciorole").value);
+    iniciorole = dt1.getFullYear()+"-"+(dt1.getMonth()+1)+"-"+dt1.getDate()+" "+(dt1.getHours()+3)+":"+dt1.getMinutes()+":"+dt1.getSeconds();
+    
+    var dt2 = new Date(document.getElementById("terminorole").value);
+    terminorole = dt2.getFullYear()+"-"+(dt2.getMonth()+1)+"-"+dt2.getDate()+" "+(dt2.getHours()+3)+":"+dt2.getMinutes()+":"+dt2.getSeconds();
+    
     var $server;
      //$server = 'http://200.18.128.78/role';
-     $server = 'http://192.168.43.190/role';
+     $server = 'http://192.168.1.100/role';
         $.ajax({
 
                type: "get",
@@ -333,7 +341,7 @@ function testarole(){
 function selecrole(){
     var $server;
      //$server = 'http://200.18.128.78/role';
-     $server = 'http://192.168.43.190/role';
+     $server = 'http://192.168.1.100/role';
         $.ajax({
 
                type: "get",

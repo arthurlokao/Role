@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-ad-project/sample.zip",
       "projectGuid": "bbaf1b47-3dc9-4606-a23a-bdf3ac5bab46",
-      "lastModifiedDate": 1472574949224,
+      "lastModifiedDate": 1474666270798,
       "creationDate": 1456680309937
     },
     "XDK-app-designer": "true",
@@ -29,7 +29,7 @@
       {
         "id": "cordova-plugin-statusbar",
         "name": "StatusBar",
-        "version": "2.0.0",
+        "version": "2.1.3",
         "originType": "cordova.io",
         "origin": "cordova-plugin-statusbar",
         "gitref": "",
@@ -42,7 +42,7 @@
         "description": "Cordova StatusBar Plugin",
         "data": {},
         "dependedBy": [],
-        "checksum": "b92cbbef"
+        "checksum": "c0146fbc"
       },
       {
         "id": "cordova-plugin-device",
@@ -141,6 +141,27 @@
         "data": {},
         "dependedBy": [],
         "custom": "true"
+      },
+      {
+        "id": "cordova-plugin-facebook4",
+        "name": "Facebook Connect",
+        "version": "1.7.1",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-facebook4",
+        "gitref": "",
+        "paramvals": {
+          "APP_ID": "1028092777276618",
+          "APP_NAME": "Role"
+        },
+        "sourceLocation": "plugins/cordova-plugin-facebook4",
+        "selectedState": "Included",
+        "checksum": "5a1597eb",
+        "dependsOn": [],
+        "topLevel": true,
+        "permissions": {},
+        "description": "\n      This is the official plugin for Facebook in Apache Cordova/PhoneGap!\n\n      The Facebook plugin for Apache Cordova allows you to use the same JavaScript code in your\n      Cordova application as you use in your web application.\n      Docs: https://github.com/Wizcorp/phonegap-facebook-plugin.\n    ",
+        "data": {},
+        "dependedBy": []
       }
     ],
     "buildConfigurations": {
